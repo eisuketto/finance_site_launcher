@@ -90,8 +90,78 @@
             margin: 5px 0;
             text-align: center;
         }
-    </style>
 
+        .accordion1 {
+            text-align: center;
+            list-style: none;
+            padding: 0 22px;
+        }
+
+        .accordion1 .inner {
+            list-style: none;
+            display: none;
+        }
+
+        .accordion1 p {
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .accordion1 p.ac1 {
+            background: #F50057;
+        }
+
+        .accordion1 p.ac2 {
+            background: #FFEA00;
+        }
+
+        .accordion1 p.ac3 {
+            background: #64DD17;
+        }
+
+        .accordion1 .inner li {
+            padding: 10px 0;
+            margin-right: auto;
+        }
+
+        .accordion1 .inner li.content1-1 {
+            background: #F48FB1;
+        }
+
+        .accordion1 .inner li.content1-2 {
+            background: #F8BBD0;
+        }
+
+        .accordion1 .inner li.content1-3 {
+            background: #FCE4EC;
+        }
+
+        .accordion1 .inner li.content2-1 {
+            background: #FFF59D;
+        }
+
+        .accordion1 .inner li.content2-2 {
+            background: #FFF9C4;
+        }
+
+        .accordion1 .inner li.content2-3 {
+            background: #FFFDE7;
+        }
+
+        .accordion1 .inner li.content3-1 {
+            background: #C5E1A5;
+        }
+
+        .accordion1 .inner li.content3-2 {
+            background: #DCEDC8;
+        }
+
+        .accordion1 .inner li.content3-3 {
+            background: #F1F8E9;
+        }
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="popup.js"></script>
 </head>
 
 <body>
@@ -159,6 +229,32 @@
             </div>
         </div>
     </div>
+    <ul class="accordion1">
+        <li>
+            <p class="ac1">アコーディオン１</p>
+            <ul class="inner">
+                <li class="content1-1">コンテンツ１</li>
+                <li class="content1-2">コンテンツ２</li>
+                <li class="content1-3">コンテンツ３</li>
+            </ul>
+        </li>
+        <li>
+            <p class="ac2">アコーディオン２</p>
+            <ul class="inner">
+                <li class="content2-1">コンテンツ１</li>
+                <li class="content2-2">コンテンツ２</li>
+                <li class="content2-3">コンテンツ３</li>
+            </ul>
+        </li>
+        <li>
+            <p class="ac3">アコーディオン３</p>
+            <ul class="inner">
+                <li class="content3-1">コンテンツ１</li>
+                <li class="content3-2">コンテンツ２</li>
+                <li class="content3-3">コンテンツ３</li>
+            </ul>
+        </li>
+    </ul>
 </body>
 
 </html>
