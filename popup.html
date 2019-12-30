@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Finance Site Launcher</title>
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <style>
+        html,
+        body {
+            font-family: 'Kosugi Maru', sans-serif;
+            font-size: 14px;
+            margin: 0;
+            min-height: 180px;
+            padding: 0;
+            width: 384px;
+        }
+
+        h1 {
+            font-family: "Menlo", monospace;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0;
+            color: #2f5876;
+        }
+
+
+        a:link,
+        a:visited {
+            color: #000000;
+            outline: 0;
+            text-decoration: none;
+        }
+
+        .model-header {
+            align-items: center;
+            border-bottom: 0.5px solid #dadada;
+        }
+
+        .model-contents {
+            padding: 0 22px;
+        }
+
+        .modal-icons {
+            border-top: 0.5px solid #dadada;
+            height: 50px;
+            width: 100%;
+        }
+
+        .logo {
+            padding: 16px;
+        }
+
+        .logo-icon {
+            vertical-align: text-bottom;
+            margin-right: 12px;
+            width: 30px;
+        }
+
+        .version {
+            color: #444;
+            font-size: 18px;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .flex {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+            width: 120px;
+        }
+
+        .flex:hover {
+            opacity: 0.4;
+        }
+
+        .container_icon {
+            width: 40px;
+        }
+
+        .container_text {
+            font-family: 'Kosugi Maru', sans-serif;
+            font-size: 10px;
+            margin: 5px 0;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="model-header">
+        <h1 class="logo">
+            <img class="logo-icon" src="images/logo.jpeg" />
+            Finance Site Launcher
+        </h1>
+        <span class="version">(1.0.0)</span>
+    </div>
+    <div class="model-content">
+        <p>Easily Access Finance Site</p>
+    </div>
+    <div class="model-icons">
+        <div class="flex-container">
+            <div class="flex">
+                <a href="https://kabutan.jp/" target="_blank">
+                    <img class="container_icon" src="images/kabutan.ico" />
+                    <p class="container_text">株探</p>
+                </a>
+            </div>
+            <div class="flex">
+                <a href="https://finance.yahoo.co.jp/" target="_blank">
+                    <img class="container_icon" src="images/yahoo_finance.ico" />
+                    <p class="container_text">Yファイナンス</p>
+                </a>
+            </div>
+            <div class="flex">
+                <a href="https://www.rakuten-sec.co.jp/" target="_blank">
+                    <img class="container_icon" src="images/rakuten.ico" />
+                    <p class="container_text">楽天銀行</p>
+                </a>
+            </div>
+            <div class="flex">
+                <a href="https://irbank.net/" target="_blank">
+                    <img class="container_icon" src="images/ir_bank.ico" />
+                    <p class="container_text">IRBANK</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
