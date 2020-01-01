@@ -1,260 +1,166 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Finance Site Launcher</title>
-    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
     <style>
-        html,
-        body {
-            font-family: 'Kosugi Maru', sans-serif;
-            font-size: 14px;
-            margin: 0;
-            min-height: 180px;
-            padding: 0;
-            width: 384px;
-        }
+      html,
+      body {
+        font-family: "Kosugi Maru", sans-serif;
+        font-size: 14px;
+        margin: 0;
+        min-height: 180px;
+        padding: 0;
+        width: 384px;
+      }
 
-        h1 {
-            font-family: "Menlo", monospace;
-            font-size: 22px;
-            font-weight: 400;
-            margin: 0;
-            color: #2f5876;
-        }
+      h1 {
+        font-family: "Menlo", monospace;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0;
+        color: #2f5876;
+      }
 
+      a:link,
+      a:visited {
+        color: #000000;
+        outline: 0;
+        text-decoration: none;
+      }
 
-        a:link,
-        a:visited {
-            color: #000000;
-            outline: 0;
-            text-decoration: none;
-        }
+      .model-header {
+        align-items: center;
+        border-bottom: 0.5px solid #dadada;
+      }
 
-        .model-header {
-            align-items: center;
-            border-bottom: 0.5px solid #dadada;
-        }
+      .model-contents {
+        padding: 0 22px;
+      }
 
-        .model-contents {
-            padding: 0 22px;
-        }
+      .modal-icons {
+        border-top: 0.5px solid #dadada;
+        height: 50px;
+        width: 100%;
+      }
 
-        .modal-icons {
-            border-top: 0.5px solid #dadada;
-            height: 50px;
-            width: 100%;
-        }
+      .logo {
+        padding: 16px;
+      }
 
-        .logo {
-            padding: 16px;
-        }
+      .logo-icon {
+        vertical-align: text-bottom;
+        margin-right: 12px;
+        width: 30px;
+      }
 
-        .logo-icon {
-            vertical-align: text-bottom;
-            margin-right: 12px;
-            width: 30px;
-        }
+      .version {
+        color: #444;
+        font-size: 18px;
+      }
 
-        .version {
-            color: #444;
-            font-size: 18px;
-        }
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        text-align: center;
+      }
 
-        .flex-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
-            text-align: center;
-        }
+      .flex {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+        width: 120px;
+      }
 
-        .flex {
-            opacity: 1;
-            transition: opacity 0.2s ease-in-out;
-            width: 120px;
-        }
+      .flex:hover {
+        opacity: 0.4;
+      }
 
-        .flex:hover {
-            opacity: 0.4;
-        }
+      .container_icon {
+        width: 40px;
+      }
 
-        .container_icon {
-            width: 40px;
-        }
-
-        .container_text {
-            font-family: 'Kosugi Maru', sans-serif;
-            font-size: 10px;
-            margin: 5px 0;
-            text-align: center;
-        }
-
-        .accordion1 {
-            text-align: center;
-            list-style: none;
-            padding: 0 22px;
-        }
-
-        .accordion1 .inner {
-            list-style: none;
-            display: none;
-        }
-
-        .accordion1 p {
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .accordion1 p.ac1 {
-            background: #F50057;
-        }
-
-        .accordion1 p.ac2 {
-            background: #FFEA00;
-        }
-
-        .accordion1 p.ac3 {
-            background: #64DD17;
-        }
-
-        .accordion1 .inner li {
-            padding: 10px 0;
-            margin-right: auto;
-        }
-
-        .accordion1 .inner li.content1-1 {
-            background: #F48FB1;
-        }
-
-        .accordion1 .inner li.content1-2 {
-            background: #F8BBD0;
-        }
-
-        .accordion1 .inner li.content1-3 {
-            background: #FCE4EC;
-        }
-
-        .accordion1 .inner li.content2-1 {
-            background: #FFF59D;
-        }
-
-        .accordion1 .inner li.content2-2 {
-            background: #FFF9C4;
-        }
-
-        .accordion1 .inner li.content2-3 {
-            background: #FFFDE7;
-        }
-
-        .accordion1 .inner li.content3-1 {
-            background: #C5E1A5;
-        }
-
-        .accordion1 .inner li.content3-2 {
-            background: #DCEDC8;
-        }
-
-        .accordion1 .inner li.content3-3 {
-            background: #F1F8E9;
-        }
+      .container_text {
+        font-family: "Kosugi Maru", sans-serif;
+        font-size: 10px;
+        margin: 5px 0;
+        text-align: center;
+      }
     </style>
-    <script src="jquery-3.4.1.min.js"></script>
-    <script src="popup.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="model-header">
-        <h1 class="logo">
-            <img class="logo-icon" src="icons/icon_48.png" />
-            Finance Site Launcher
-        </h1>
-        <span class="version">(1.0.0)</span>
+      <h1 class="logo">
+        <img class="logo-icon" src="icons/icon_48.png" />
+        Finance Site Launcher
+      </h1>
+      <span class="version">(1.0.0)</span>
     </div>
     <div class="model-content">
-        <p>Easily Access Finance Site</p>
+      <p>Easily Access Finance Site</p>
     </div>
     <div class="model-icons">
-        <div class="flex-container">
-            <div class="flex">
-                <a href="https://kabutan.jp/" target="_blank">
-                    <img class="container_icon" src="images/kabutan.ico" />
-                    <p class="container_text">株探</p>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://finance.yahoo.co.jp/" target="_blank">
-                    <img class="container_icon" src="images/yahoo.ico" />
-                    <p class="container_text">Yファイナンス</p>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://www.rakuten-sec.co.jp/" target="_blank">
-                    <img class="container_icon" src="images/rakuten.ico" />
-                    <p class="container_text">楽天証券</p>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://irbank.net/" target="_blank">
-                    <img class="container_icon" src="images/ir_bank.ico" />
-                    <p class="container_text">IRBANK</p>
-                </a>
-            </div>
+      <div class="flex-container">
+        <div class="flex">
+          <a href="https://kabutan.jp/" target="_blank">
+            <img class="container_icon" src="images/kabutan.ico" />
+            <p class="container_text">株探</p>
+          </a>
         </div>
-        <div class="flex-container">
-            <div class="flex">
-                <a href="https://www.sbisec.co.jp/ETGate" target="_blank">
-                    <img class="container_icon" src="images/sbi.ico" />
-                    <p class="container_text">SBI証券</p>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://sekai-kabuka.com/" target="_blank">
-                    <img class="container_icon" src="images/sekai_kabuka.ico" />
-                    <p class="container_text">世界の株価</p>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="https://www.rakuten-bank.co.jp/" target="_blank">
-                    <img class="container_icon" src="images/rakuten.ico" />
-                    <p class="container_text">楽天銀行</p>
-                </a>
-            </div>
-            <div class="flex">
-                <a href="http://kabuka.biz/riron/" target="_blank">
-                    <img class="container_icon" src="images/riron_kabuka.png" />
-                    <p class="container_text">理論株価web</p>
-                </a>
-            </div>
+        <div class="flex">
+          <a href="https://finance.yahoo.co.jp/" target="_blank">
+            <img class="container_icon" src="images/yahoo.ico" />
+            <p class="container_text">Yファイナンス</p>
+          </a>
         </div>
+        <div class="flex">
+          <a href="https://www.rakuten-sec.co.jp/" target="_blank">
+            <img class="container_icon" src="images/rakuten.ico" />
+            <p class="container_text">楽天証券</p>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://irbank.net/" target="_blank">
+            <img class="container_icon" src="images/ir_bank.ico" />
+            <p class="container_text">IRBANK</p>
+          </a>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="flex">
+          <a href="https://www.sbisec.co.jp/ETGate" target="_blank">
+            <img class="container_icon" src="images/sbi.ico" />
+            <p class="container_text">SBI証券</p>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://sekai-kabuka.com/" target="_blank">
+            <img class="container_icon" src="images/sekai_kabuka.ico" />
+            <p class="container_text">世界の株価</p>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.rakuten-bank.co.jp/" target="_blank">
+            <img class="container_icon" src="images/rakuten.ico" />
+            <p class="container_text">楽天銀行</p>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="http://kabuka.biz/riron/" target="_blank">
+            <img class="container_icon" src="images/riron_kabuka.png" />
+            <p class="container_text">理論株価web</p>
+          </a>
+        </div>
+      </div>
     </div>
-    <ul class="accordion1">
-        <li>
-            <p class="ac1">アコーディオン１</p>
-            <ul class="inner">
-                <li class="content1-1">コンテンツ１</li>
-                <li class="content1-2">コンテンツ２</li>
-                <li class="content1-3">コンテンツ３</li>
-            </ul>
-        </li>
-        <li>
-            <p class="ac2">アコーディオン２</p>
-            <ul class="inner">
-                <li class="content2-1">コンテンツ１</li>
-                <li class="content2-2">コンテンツ２</li>
-                <li class="content2-3">コンテンツ３</li>
-            </ul>
-        </li>
-        <li>
-            <p class="ac3">アコーディオン３</p>
-            <ul class="inner">
-                <li class="content3-1">コンテンツ１</li>
-                <li class="content3-2">コンテンツ２</li>
-                <li class="content3-3">コンテンツ３</li>
-            </ul>
-        </li>
-    </ul>
-</body>
-
+  </body>
 </html>
